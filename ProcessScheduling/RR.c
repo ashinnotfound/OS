@@ -35,8 +35,8 @@ struct PCB createProcess(){
 //将进程数组按FCFS原则排序
 void sort(int processNum, struct PCB pcbs[]){
     //无脑冒泡
-    for (int i = 0; i < processNum; i++){
-        for (int j = 0; j < processNum - i; j++){
+    for (int i = 0; i < processNum - 1; i++){
+        for (int j = 0; j < processNum - i - 1; j++){
             if (pcbs[j].arrivalTime > pcbs[j+1].arrivalTime){
                 struct PCB temp = pcbs[j];
                 pcbs[j] = pcbs[j+1];
